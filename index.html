@@ -2,37 +2,63 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Praveen Nukilla</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Praveen Nukilla | Portfolio</title>
   <link rel="stylesheet" href="style.css" />
 </head>
-<body>
-  <section class="intro">
+<body class="light-mode">
+  <!-- Theme Toggle -->
+  <button id="themeToggle">🌙 Toggle Theme</button>
+
+  <!-- Header Section -->
+  <header>
     <h1>Praveen Nukilla</h1>
-    <p>ECE Student | Competitive Programmer</p>
+    <p class="subtitle">ECE Student • Competitive Programmer • Tech Enthusiast</p>
+  </header>
+
+  <!-- About Section -->
+  <section id="about">
+    <h2>👋 About Me</h2>
+    <p>I’m an Electronics and Communication Engineering student passionate about systems, signal processing, embedded development, and competitive programming. I love building and debugging both hardware and software systems, always striving for elegant solutions.</p>
   </section>
 
-  <section class="about">
-    <h2>About Me</h2>
-    <p>I’m passionate about hardware, signal processing, and algorithms. Always eager to learn and build.</p>
-  </section>
-
-  <section class="projects">
-    <h2>Projects</h2>
+  <!-- Projects Section -->
+  <section id="projects">
+    <h2>💻 Projects</h2>
     <ul>
-      <li><strong>Voice-Music Separator:</strong> ML-based audio separation tool.</li>
-      <li><strong>Sample-and-Hold Circuit:</strong> Analog design in Cadence.</li>
+      <li><strong>🎧 Voice-Music Separator:</strong> Used ML models to isolate vocals from background music using frequency filtering and deep learning.</li>
+      <li><strong>🔋 Sample-and-Hold Circuit:</strong> Designed and simulated a bootstrap sample-and-hold using Op-Amps in Cadence.</li>
+      <li><strong>📈 VH/VV Harmonic Analyzer:</strong> Satellite data analysis using least squares and Simpson integration in Python/Matlab.</li>
     </ul>
   </section>
 
-  <section class="skills">
-    <h2>Skills</h2>
-    <p>C++, Python, Verilog, MATLAB, Git, Cadence, LaTeX</p>
+  <!-- Skills Section -->
+  <section id="skills">
+    <h2>🛠️ Skills</h2>
+    <div class="skills-list">
+      <span>C++</span>
+      <span>Python</span>
+      <span>MATLAB</span>
+      <span>Verilog</span>
+      <span>Git</span>
+      <span>LaTeX</span>
+      <span>Cadence Virtuoso</span>
+      <span>Linux</span>
+    </div>
   </section>
 
-  <section class="resume">
-    <h2>Resume</h2>
-    <a href="resume.pdf" target="_blank">Download PDF</a>
+  <!-- Resume Section -->
+  <section id="resume">
+    <h2>📄 Resume</h2>
+    <p>Want to know more? Download my full resume here:</p>
+    <a href="resume.pdf" target="_blank" class="resume-button">📥 Download Resume</a>
   </section>
+
+  <!-- Footer -->
+  <footer>
+    <p>Made with ❤️ by Praveen Nukilla • <a href="mailto:youremail@example.com">Contact Me</a></p>
+  </footer>
+
+  <script src="script.js"></script>
 </body>
 </html>
