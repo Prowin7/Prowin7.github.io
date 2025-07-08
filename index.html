@@ -5,13 +5,30 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Praveen Nukilla | Portfolio</title>
   <link rel="stylesheet" href="style.css" />
+  <style>
+    html {
+      scroll-behavior: smooth;
+    }
+  </style>
 </head>
 <body class="light-mode">
+
   <!-- Theme Toggle -->
   <button id="themeToggle">🌙 Toggle Theme</button>
 
+  <!-- Navigation Bar -->
+  <nav>
+    <ul class="navbar">
+      <li><a href="#about">About</a></li>
+      <li><a href="#projects">Projects</a></li>
+      <li><a href="#skills">Skills</a></li>
+      <li><a href="#resume">Resume</a></li>
+      <li><a href="#top">Top ⬆</a></li>
+    </ul>
+  </nav>
+
   <!-- Header Section -->
-  <header>
+  <header id="top">
     <h1>Praveen Nukilla</h1>
     <p class="subtitle">ECE Student • Competitive Programmer • Tech Enthusiast</p>
   </header>
@@ -56,9 +73,13 @@
 
   <!-- Footer -->
   <footer>
-    <p>Made with ❤️ by Praveen Nukilla • <a href="mailto:youremail@example.com">Contact Me</a></p>
+    <p>Made with ❤️ by Praveen Nukilla • <a href="mailto:youremail@example.com" target="_blank">Contact Me</a></p>
   </footer>
 
+  <!-- Back to Top Button -->
+  <button onclick="window.scrollTo({top: 0, behavior: 'smooth'})" id="backToTop">⬆</button>
+
+  <!-- Script -->
   <script src="script.js"></script>
 </body>
 </html>
