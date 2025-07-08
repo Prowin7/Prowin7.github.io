@@ -5,14 +5,26 @@ body {
   padding: 0 20px;
   max-width: 900px;
   line-height: 1.6;
-  background-color: #fff;
-  color: #222;
   transition: background-color 0.3s, color 0.3s;
+}
+
+body.light-mode {
+  background: #fff;
+  color: #222;
+}
+
+body.dark-mode {
+  background-color: #121212;
+  color: #e0e0e0;
 }
 
 h1, h2, h3 {
   color: #0057b8;
   margin-top: 40px;
+}
+
+.dark-mode h1, .dark-mode h2, .dark-mode h3 {
+  color: #90caf9;
 }
 
 h1 {
@@ -79,6 +91,10 @@ nav {
   font-size: 0.9rem;
 }
 
+body.dark-mode .skills-list span {
+  background-color: #1e88e5;
+}
+
 /* Projects */
 .project-cards {
   display: grid;
@@ -110,6 +126,10 @@ nav {
   text-decoration: none;
 }
 
+body.dark-mode .project-card {
+  background-color: #1f1f1f;
+}
+
 /* Resume button */
 .resume-button {
   display: inline-block;
@@ -126,6 +146,15 @@ nav {
   background-color: #0046a0;
 }
 
+body.dark-mode .resume-button {
+  background-color: #2196f3;
+  color: #fff;
+}
+
+body.dark-mode .resume-button:hover {
+  background-color: #1976d2;
+}
+
 /* Footer */
 footer {
   text-align: center;
@@ -138,6 +167,10 @@ footer {
 footer a {
   color: #0057b8;
   text-decoration: none;
+}
+
+body.dark-mode footer a {
+  color: #90caf9;
 }
 
 /* Theme toggle button */
@@ -159,39 +192,6 @@ footer a {
 body.dark-mode #themeToggle {
   background-color: #eee;
   color: #111;
-}
-
-/* Dark mode */
-body.dark-mode {
-  background-color: #121212;
-  color: #e0e0e0;
-}
-
-body.dark-mode h1, 
-body.dark-mode h2,
-body.dark-mode h3 {
-  color: #90caf9;
-}
-
-body.dark-mode .skills-list span {
-  background-color: #1e88e5;
-}
-
-body.dark-mode .project-card {
-  background-color: #1f1f1f;
-}
-
-body.dark-mode .resume-button {
-  background-color: #2196f3;
-  color: #fff;
-}
-
-body.dark-mode .resume-button:hover {
-  background-color: #1976d2;
-}
-
-body.dark-mode footer a {
-  color: #90caf9;
 }
 
 /* Back to top button */
@@ -226,4 +226,16 @@ body.dark-mode footer a {
     font-size: 12px;
     padding: 6px 10px;
   }
+}
+.profile-pic {
+  width: 150px;              /* Resize image */
+  height: 150px;
+  object-fit: cover;         /* Maintain aspect ratio & crop excess */
+  border-radius: 50%;        /* Makes it a circle */
+  margin-top: 20px;
+  border: 4px solid #0057b8; /* Optional border */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15); /* Soft shadow */
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
 }
