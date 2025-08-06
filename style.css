@@ -1,16 +1,32 @@
 /* Base styles */
 :root {
+  --primary-color: #0057b8;
+  --background-color: #ffffff;
+  --text-color: #333333;
   --header-bg: #ffffff;
   --header-text: #222222;
   --header-border: #0057b8;
   --subtitle-color: #666666;
+  --card-bg: #f8f9fa;
+  --nav-bg: rgba(255, 255, 255, 0.95);
+  --border-color: #dee2e6;
+  --link-color: #0066cc;
+  --hover-color: #0056b3;
 }
 
 .dark-mode {
+  --primary-color: #61dafb;
+  --background-color: #121212;
+  --text-color: #ffffff;
   --header-bg: #1a1a1a;
   --header-text: #ffffff;
   --header-border: #61dafb;
   --subtitle-color: #b0b0b0;
+  --card-bg: #2d2d2d;
+  --nav-bg: rgba(29, 29, 29, 0.95);
+  --border-color: #404040;
+  --link-color: #61dafb;
+  --hover-color: #4fa8c7;
 }
 
 body {
