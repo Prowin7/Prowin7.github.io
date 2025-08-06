@@ -1,32 +1,39 @@
 /* Base styles */
 body {
-  font-family: 'Segoe UI', sans-serif;
-  margin: 0;
+  font-family: 'Poppins', sans-serif;
+  margin: 0 auto;
   padding: 0 20px;
-  line-height: 1.6;
-  transition: background-color 0.4s, color 0.4s;
   max-width: 900px;
-  margin: auto;
+  line-height: 1.6;
+  background-color: #fff;
+  color: #222;
+  transition: background-color 0.3s, color 0.3s;
 }
 
-h1, h2 {
+h1, h2, h3 {
   color: #0057b8;
   margin-top: 40px;
 }
 
 h1 {
-  font-size: 2.2rem;
+  font-size: 2.5rem;
   margin-bottom: 0;
+}
+
+h2 {
+  font-size: 1.8rem;
+  border-bottom: 2px solid #ddd;
+  padding-bottom: 5px;
 }
 
 .subtitle {
   font-size: 1.2rem;
-  color: #555;
+  color: #666;
   margin-top: 5px;
 }
 
 section {
-  padding: 20px 0;
+  padding: 30px 0;
   border-bottom: 1px solid #ccc;
 }
 
@@ -34,26 +41,72 @@ ul {
   padding-left: 20px;
 }
 
+/* Navigation */
+nav {
+  position: sticky;
+  top: 0;
+  background-color: white;
+  padding: 10px 0;
+  border-bottom: 1px solid #ccc;
+  z-index: 1000;
+}
+
+.navbar {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 25px;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.navbar li a {
+  text-decoration: none;
+  color: #0057b8;
+  font-weight: 600;
+  font-size: 1rem;
+}
+
+/* Skills */
 .skills-list span {
   display: inline-block;
   background: #0057b8;
   color: white;
-  padding: 5px 10px;
-  margin: 5px 5px 0 0;
-  border-radius: 6px;
-  font-size: 0.95rem;
-}
-
-footer {
-  text-align: center;
-  padding: 30px 0;
+  padding: 6px 12px;
+  margin: 5px 6px 0 0;
+  border-radius: 20px;
   font-size: 0.9rem;
-  border-top: 1px solid #ccc;
-  margin-top: 40px;
 }
 
-footer a {
-  color: #0077cc;
+/* Projects */
+.project-cards {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 16px;
+}
+
+.project-card {
+  background: #f9f9f9;
+  padding: 15px;
+  border-radius: 10px;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.08);
+  transition: transform 0.2s;
+}
+
+.project-card:hover {
+  transform: translateY(-3px);
+}
+
+.project-card h3 {
+  margin-top: 0;
+  margin-bottom: 5px;
+  color: #333;
+}
+
+.project-card a {
+  color: #0057b8;
+  font-weight: 500;
   text-decoration: none;
 }
 
@@ -66,38 +119,25 @@ footer a {
   text-decoration: none;
   border-radius: 5px;
   margin-top: 10px;
+  font-weight: 500;
 }
 
 .resume-button:hover {
   background-color: #0046a0;
 }
 
-/* Dark mode support */
-body.dark-mode {
-  background-color: #121212;
-  color: #e0e0e0;
+/* Footer */
+footer {
+  text-align: center;
+  padding: 30px 0;
+  font-size: 0.9rem;
+  border-top: 1px solid #ccc;
+  margin-top: 40px;
 }
 
-body.dark-mode h1, 
-body.dark-mode h2 {
-  color: #90caf9;
-}
-
-body.dark-mode .skills-list span {
-  background-color: #1e88e5;
-}
-
-body.dark-mode .resume-button {
-  background-color: #2196f3;
-  color: #fff;
-}
-
-body.dark-mode .resume-button:hover {
-  background-color: #1976d2;
-}
-
-body.dark-mode footer a {
-  color: #90caf9;
+footer a {
+  color: #0057b8;
+  text-decoration: none;
 }
 
 /* Theme toggle button */
@@ -119,6 +159,59 @@ body.dark-mode footer a {
 body.dark-mode #themeToggle {
   background-color: #eee;
   color: #111;
+}
+
+/* Dark mode */
+body.dark-mode {
+  background-color: #121212;
+  color: #e0e0e0;
+}
+
+body.dark-mode h1, 
+body.dark-mode h2,
+body.dark-mode h3 {
+  color: #90caf9;
+}
+
+body.dark-mode .skills-list span {
+  background-color: #1e88e5;
+}
+
+body.dark-mode .project-card {
+  background-color: #1f1f1f;
+}
+
+body.dark-mode .resume-button {
+  background-color: #2196f3;
+  color: #fff;
+}
+
+body.dark-mode .resume-button:hover {
+  background-color: #1976d2;
+}
+
+body.dark-mode footer a {
+  color: #90caf9;
+}
+
+/* Back to top button */
+#backToTop {
+  position: fixed;
+  bottom: 25px;
+  right: 25px;
+  background: #0057b8;
+  color: white;
+  border: none;
+  border-radius: 50%;
+  font-size: 20px;
+  padding: 10px 14px;
+  cursor: pointer;
+  box-shadow: 0 3px 6px rgba(0,0,0,0.2);
+  z-index: 1000;
+}
+
+#backToTop:hover {
+  background-color: #0046a0;
 }
 
 /* Responsive design */
