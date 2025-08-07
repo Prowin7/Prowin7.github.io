@@ -1,17 +1,31 @@
 /* Base styles */
 :root {
-  --primary-color: #0057b8;
-  --background-color: #ffffff;
-  --text-color: #333333;
+  --primary-color: #2c5282;
+  --background-color: #f7fafc;
+  --text-color: #2d3748;
   --header-bg: #ffffff;
-  --header-text: #222222;
-  --header-border: #0057b8;
-  --subtitle-color: #666666;
-  --card-bg: #f8f9fa;
+  --header-text: #1a202c;
+  --header-b/* Projects */
+.project-cards {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 20px;
+}
+
+.project-card {
+  background: #f9f9f9;
+  padding: 15px;
+  border-radius: 10px;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.08);
+  transition: transform 0.25s ease;
+};
+  --subtitle-color: #4a5568;
+  --card-bg: #ffffff;
   --nav-bg: rgba(255, 255, 255, 0.95);
-  --border-color: #dee2e6;
-  --link-color: #0066cc;
-  --hover-color: #0056b3;
+  --border-color: #e2e8f0;
+  --link-color: #3182ce;
+  --hover-color: #2c5282;
+  --section-bg: #ffffff;
 }
 
 .dark-mode {
@@ -73,6 +87,58 @@ section {
 
 ul {
   padding-left: 20px;
+}
+
+#coding ul {
+  list-style: none;
+  padding: 0;
+  display: flex;
+  gap: 20px;
+  justify-content: center;
+  margin-top: 20px;
+}
+
+#coding li a {
+  display: inline-block;
+  text-decoration: none;
+  padding: 10px 25px;
+  border-radius: 8px;
+  font-weight: 500;
+  transition: all 0.3s ease;
+  text-align: center;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+
+#coding li a[href*="leetcode"] {
+  background-color: #f0932b;
+  color: white;
+}
+
+#coding li a[href*="geeksforgeeks"] {
+  background-color: #009432;
+  color: white;
+}
+
+#coding li a[href*="github"] {
+  background-color: #6c5ce7;
+  color: white;
+}
+
+#coding li a:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+}
+
+#coding li a[href*="leetcode"]:hover {
+  background-color: #e67e22;
+}
+
+#coding li a[href*="geeksforgeeks"]:hover {
+  background-color: #007e2b;
+}
+
+#coding li a[href*="github"]:hover {
+  background-color: #5f3dc4;
 }
 
 /* Navigation */
@@ -325,4 +391,40 @@ body.dark-mode footer a {
     --border-color: #404040;
     --link-color: #61dafb;
     --hover-color: #4fa8c7;
+}
+.project-links {
+  display: flex;
+  gap: 15px;
+  margin-top: 15px;
+}
+
+.project-links a {
+  flex: 1;
+  display: inline-block;
+  padding: 8px 15px;
+  text-align: center;
+  text-decoration: none;
+  border-radius: 6px;
+  font-weight: 500;
+  transition: all 0.3s ease;
+}
+
+.project-links a:first-child {
+  background-color: #2ecc71;
+  color: white;
+}
+
+.project-links a:last-child {
+  background-color: #3498db;
+  color: white;
+}
+
+.project-links a:first-child:hover {
+  background-color: #27ae60;
+  transform: translateY(-2px);
+}
+
+.project-links a:last-child:hover {
+  background-color: #2980b9;
+  transform: translateY(-2px);
 }
